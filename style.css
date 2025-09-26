@@ -1,0 +1,80 @@
+
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.row {
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.tileW {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-W.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.sword {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-SW.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.hp {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-HP.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.wrapperP, .wrapperE{
+    display: flex;
+    flex-direction: column;
+}
+.p {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-P.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.e {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-E.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.tile {
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/tile-.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.h{
+    height: 2px;
+    background-color: greenyellow;
+}
+
+.h1{
+    height: 2px;
+    background-color: red;
+}
