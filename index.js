@@ -32,6 +32,18 @@ class Game {
         clearInterval(this.interval)
     }
 
+    isGetRoomAchievable(h, w, startY, startX){
+        let rez = false
+        for (let i=startY; i<=h+startY; i++){
+            for (let j=startX; j<=w+startX; j++) {
+                if (this.array[i][j].v == 1) {
+                    rez = true
+                    break
+                }
+            }
+        }
+        return rez
+    }
 
     init() {
         this.field.innerHTML = ''
@@ -305,6 +317,11 @@ class Game {
         let startX = this.getRandom(0, this.m-w-1)
         let startY = this.getRandom(0, this.n-h-1)
 
+        while (!this.isGetRoomAchievable(h, w, startY, startX)){
+            startX = this.getRandom(0, this.m-w-1)
+            startY = this.getRandom(0, this.n-h-1)
+        }
+
         for (let i=startY; i<=h+startY; i++){
             for (let j=startX; j<=w+startX; j++) {
                 this.array[i][j] = {v: 1}
@@ -382,9 +399,10 @@ class Game {
             this.array[this.yP][this.xP] = {h: p.h-1, v: 'p'}
         }
 
-        if (p.h-1 == 0){
+        if (p.h == 0){
             clearInterval(this.interval)
             alert('Вы проиграли')
+            location.reload();
 
         }
     }
